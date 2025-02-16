@@ -1,0 +1,84 @@
+/* Container for all product cards */
+.products-container {
+  display: flex;
+  flex-wrap: wrap; /* Ensures items move to the next row */
+  justify-content: center; /* Centers the items */
+  gap: 20px; /* Space between products */
+}
+
+
+.product-card {
+  width: 300px; /* Fixed width for each product */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+p {
+  margin: 5px 0;
+}
+
+/* Styles for the gallery container */
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping if too many images */
+  gap: 10px; /* Space between images */
+  margin-top: 10px;
+}
+
+/* Styles for each image inside the gallery */
+.gallery-image {
+  width: 80px; /* Adjust size */
+  height: auto;
+  border-radius: 5px; /* Optional: rounded corners */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gallery-image:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Style for the buy link to look like a button */
+.buy-button {
+  display: inline-block;
+  background-color: #28a745; /* Green color */
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px; /* Rounded corners */
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-top: 10px; /* Adds spacing from other elements */
+}
+
+.buy-button:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

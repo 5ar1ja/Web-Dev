@@ -1,0 +1,19 @@
+<div class="products-container">
+    <div *ngFor="let product of products" class="product-card">
+      <h3>{{ product.name }}</h3>
+      <p>{{ product.description }}</p>
+      <img [src]="product.image" alt="{{ product.name }}" class="main-image">
+      <p>Rating: {{ product.rating }}</p>
+      <a [href]="product.kaspiLink" target="_blank" class="buy-button">
+        Buy on Kaspi
+      </a>
+      
+  
+      <div class="gallery-container">
+        <div *ngFor="let image of product.gallery" class="gallery-item">
+          <img [src]="image" alt="{{ product.name }}" class="gallery-image">
+        </div>
+      </div>
+    </div>
+  </div>
+  
