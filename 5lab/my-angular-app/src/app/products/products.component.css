@@ -1,0 +1,5 @@
+.products-container {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap; /* Чтобы переносились на новую строку при недостатке места */
+}

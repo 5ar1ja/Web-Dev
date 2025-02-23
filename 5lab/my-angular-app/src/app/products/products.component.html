@@ -1,0 +1,7 @@
+<div class="products-container">
+  <app-product-item
+    *ngFor="let product of products; index as i"
+    [product]="product"
+    (remove)="onRemoveProduct(i)">
+  </app-product-item>
+</div>

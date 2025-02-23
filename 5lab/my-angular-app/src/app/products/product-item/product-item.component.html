@@ -1,0 +1,17 @@
+<div class="product-card">
+  <h3>{{ product.name }}</h3>
+  <p>{{ product.description }}</p>
+  <img [src]="product.image" alt="{{ product.name }}" class="main-image">
+  <p>Rating: {{ product.rating }}</p>
+  <p>Likes: {{ product.likes }}</p> <!-- Отображаем количество лайков -->
+  <a [href]="product.kaspiLink" target="_blank" class="buy-button">
+    Buy on Kaspi
+  </a>
+  <div class="gallery-container">
+    <img *ngFor="let image of product.gallery" [src]="image" alt="Gallery Image" class="gallery-image">
+  </div>
+  <div class="button-group">
+    <button (click)="onLike()">Like</button> <!-- Вызов метода onLike -->
+    <button (click)="onRemove()">Remove</button> <!-- Вызов метода onRemove -->
+  </div>
+</div>

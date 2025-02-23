@@ -1,0 +1,24 @@
+<div class="categories">
+    <h2>Categories</h2>
+    <div class="category-buttons">
+      <button
+        *ngFor="let category of categories"
+        (click)="onSelectCategory(category)"
+        class="category-button"
+      >
+        {{ category }}
+      </button>
+    </div>
+  </div>
+  
+  <div *ngIf="selectedCategory">
+    <h2>{{ selectedCategory }}</h2>
+    <app-product-list
+      [products]="products"
+      (like)="onLike($event)"
+      (remove)="onRemove($event)"
+    ></app-product-list>
+  </div>
+  
+  <router-outlet></router-outlet>
+  
