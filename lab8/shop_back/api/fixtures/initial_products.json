@@ -1,0 +1,40 @@
+[
+    {
+      "model": "api.category",
+      "pk": 1,
+      "fields": {
+        "name": "Vacuum Cleaners"
+      }
+    },
+    {
+      "model": "api.product",
+      "pk": 1,
+      "fields": {
+        "name": "Пылесос Deerma DX700",
+        "price": 299.99,
+        "description": "Пылесос Deerma DX700 белый",
+        "count": 15,
+        "is_active": true,
+        "category": 1
+      }
+    },
+    {
+      "model": "api.category",
+      "pk": 2,
+      "fields": {
+        "name": "Smartphones"
+      }
+    },
+    {
+      "model": "api.product",
+      "pk": 2,
+      "fields": {
+        "name": "iPhone 13",
+        "price": 799.99,
+        "description": "Смартфон Apple iPhone 13 128Gb",
+        "count": 10,
+        "is_active": true,
+        "category": 2
+      }
+    }
+  ]
