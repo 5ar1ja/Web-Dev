@@ -1,0 +1,27 @@
+.vacancies {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .vacancy {
+    padding: 1rem;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+  }
+  
+  .vacancy h4 {
+    margin-top: 0;
+    color: #333;
+  }
+  
+  .salary {
+    font-weight: bold;
+    color: #28a745;
+  }
+  
+  .no-vacancies {
+    color: #6c757d;
+    font-style: italic;
+    padding: 1rem;
+  }

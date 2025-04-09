@@ -1,0 +1,95 @@
+.container {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem;
+  }
+  
+  .company-list-container {
+    flex: 1;
+    max-width: 350px;
+  }
+  
+  .vacancies-container {
+    flex: 2;
+    border-left: 1px solid #eee;
+    padding-left: 1.5rem;
+  }
+  
+  .companies {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .companies li {
+    margin-bottom: 0.5rem;
+  }
+  
+  button {
+    padding: 0.75rem;
+    width: 100%;
+    text-align: left;
+    border: 1px solid #ddd;
+    background: white;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s;
+  }
+  
+  button:hover {
+    background-color: #f5f5f5;
+  }
+  
+  button.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+  }
+  
+  .company-info {
+    display: block;
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 0.25rem;
+  }
+  
+  .vacancies-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .close-btn {
+    width: auto;
+    padding: 0 0.5rem;
+    border: none;
+    background: transparent;
+    font-size: 1.5rem;
+    color: #999;
+  }
+  
+  .loading {
+    color: #666;
+    padding: 1rem;
+  }
+  
+  .error {
+    color: #dc3545;
+    padding: 1rem;
+    background: #f8d7da;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+  }
+  
+  .error button {
+    margin-top: 0.5rem;
+    background: #dc3545;
+    color: white;
+  }
+
+  .no-companies {
+    color: #666;
+    font-style: italic;
+    text-align: center;
+    padding: 20px;
+  }

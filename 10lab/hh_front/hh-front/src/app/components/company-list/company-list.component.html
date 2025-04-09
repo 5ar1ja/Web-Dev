@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="company-section">
+      <h2>Companies</h2>
+      
+      @if (isLoading) {
+        <div class="loading-spinner"></div>
+      } @else if (error) {
+        <div class="error-alert">
+          {{ error }}
+          <button (click)="loadCompanies()">Retry</button>
+        </div>
+      } @else {
+        @if (companies.length > 0) {
+          <ul class="company-list">
+            @for (company of companies; track company.id) {
+              <li>
+                <button 
+                  (click)="showVacancies(company.id)"
+                  [class.active]="selectedCompanyId === company.id"
+                >
+                  <span class="company-name">{{ company.name }}</span>
+                  <span class="company-location">{{ company.city }}</span>
+                </button>
+              </li>
+            }
+          </ul>
+        } @else {
+          <div class="no-companies">
+            No companies available.
+          </div>
+        }
+      }
+    </div>
+  
+    @if (selectedCompanyId !== null) {
+      <div class="vacancies-section">
+        <div class="section-header">
+          <h3>Vacancies</h3>
+          <button (click)="clearSelection()" class="close-btn">×</button>
+        </div>
+        <app-company-vacancies [companyId]="selectedCompanyId"></app-company-vacancies>
+      </div>
+    }
+  </div>

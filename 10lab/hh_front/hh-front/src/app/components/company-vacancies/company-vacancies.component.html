@@ -1,0 +1,22 @@
+@if (isLoading) {
+    <div class="loading">Loading vacancies...</div>
+  } @else if (error) {
+    <div class="error">
+      {{ error }}
+      <button (click)="loadVacancies()">Retry</button>
+    </div>
+  } @else {
+    @if (vacancies.length > 0) {
+      <ul class="vacancies">
+        @for (vacancy of vacancies; track vacancy.id) {
+          <li class="vacancy">
+            <h4>{{ vacancy.name }}</h4>
+            <p>{{ vacancy.description }}</p>
+            <div class="salary">Salary: ${{ vacancy.salary }}</div>
+          </li>
+        }
+      </ul>
+    } @else {
+      <div class="no-vacancies">No vacancies available for this company</div>
+    }
+  }

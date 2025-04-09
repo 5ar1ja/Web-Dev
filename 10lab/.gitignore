@@ -1,0 +1,39 @@
+# Django
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+db.sqlite3
+media/
+.env
+.env.prod
+.env.dev
+.venv/
+venv/
+env/
+
+# Статические файлы Django (если собираются)
+/static/
+/staticfiles/
+
+# Angular
+/node_modules/
+/dist/
+/.angular/
+/cache/
+/.npm
+/coverage/
+*.tgz
+
+# IDE и редакторы
+.idea/
+.vscode/
+*.swp
+*.swo
+*.sublime-workspace
+*.sublime-project
+
+# Системные файлы
+.DS_Store
+Thumbs.db
